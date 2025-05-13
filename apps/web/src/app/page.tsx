@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Json } from '@shared/types';
 
 export default function Home() {
   return (

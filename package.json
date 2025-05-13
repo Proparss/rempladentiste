@@ -1,12 +1,22 @@
 {
   "name": "rempladentiste",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "packageManager": "pnpm@10.10.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+   "dev:web": "turbo run dev --filter=web",
+   "dev:api": "turbo run dev --filter=api",
+   "build": "turbo run build",
+   "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore",
+   "test": "turbo run test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
-}
+  "devDependencies": {
+   "turbo": "^2.5.3",
+ "typescript": "^5.0.0",
+ "eslint": "^8.0.0",
+ "@typescript-eslint/parser": "^5.0.0",
+ "@typescript-eslint/eslint-plugin": "^5.0.0",
+ "prettier": "^2.0.0",
+ "@types/node": "^18.0.0"
+  }
+  }
